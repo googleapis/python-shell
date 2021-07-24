@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/googleapis/python-shell/compare/v0.2.1...v0.3.0) (2021-07-24)
+
+
+### Features
+
+* add Samples section to CONTRIBUTING.rst ([#17](https://www.github.com/googleapis/python-shell/issues/17)) ([ce23d47](https://www.github.com/googleapis/python-shell/commit/ce23d475183fa3baa561f23c30d28cac09f6794d))
+
+
+### Bug Fixes
+
+* enable self signed jwt for grpc ([#21](https://www.github.com/googleapis/python-shell/issues/21)) ([0dafd2f](https://www.github.com/googleapis/python-shell/commit/0dafd2fbb839fcca38d6dc27b9fffff182f2add0))
+
 ### [0.2.1](https://www.github.com/googleapis/python-shell/compare/v0.2.0...v0.2.1) (2021-07-21)
 
 
