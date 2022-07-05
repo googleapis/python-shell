@@ -1807,7 +1807,6 @@ def test_cloud_shell_service_transport_auth_adc(transport_class):
     [
         transports.CloudShellServiceGrpcTransport,
         transports.CloudShellServiceGrpcAsyncIOTransport,
-        transports.CloudShellServiceRestTransport,
     ],
 )
 def test_cloud_shell_service_transport_auth_gdch_credentials(transport_class):
