@@ -3,7 +3,7 @@ Python Client for Cloud Shell API
 
 |stable| |pypi| |versions|
 
-`Cloud Shell API`_: 
+`Cloud Shell API`_: is an interactive shell environment for Google Cloud that makes it easy for you to learn and experiment with Google Cloud and manage your projects and resources from your web browser.
 
 - `Client Library Documentation`_
 - `Product Documentation`_
