@@ -16,7 +16,18 @@
 from collections import OrderedDict
 import os
 import re
-from typing import Dict, Mapping, Optional, Sequence, Tuple, Type, Union, cast
+from typing import (
+    Dict,
+    Mapping,
+    MutableMapping,
+    MutableSequence,
+    Optional,
+    Sequence,
+    Tuple,
+    Type,
+    Union,
+    cast,
+)
 
 from google.api_core import client_options as client_options_lib
 from google.api_core import exceptions as core_exceptions
@@ -60,7 +71,7 @@ class CloudShellServiceClientMeta(type):
 
     def get_transport_class(
         cls,
-        label: str = None,
+        label: Optional[str] = None,
     ) -> Type[CloudShellServiceTransport]:
         """Returns an appropriate transport class.
 
@@ -338,7 +349,7 @@ class CloudShellServiceClient(metaclass=CloudShellServiceClientMeta):
         self,
         *,
         credentials: Optional[ga_credentials.Credentials] = None,
-        transport: Union[str, CloudShellServiceTransport, None] = None,
+        transport: Optional[Union[str, CloudShellServiceTransport]] = None,
         client_options: Optional[Union[client_options_lib.ClientOptions, dict]] = None,
         client_info: gapic_v1.client_info.ClientInfo = DEFAULT_CLIENT_INFO,
     ) -> None:
@@ -436,11 +447,11 @@ class CloudShellServiceClient(metaclass=CloudShellServiceClientMeta):
 
     def get_environment(
         self,
-        request: Union[cloudshell.GetEnvironmentRequest, dict] = None,
+        request: Optional[Union[cloudshell.GetEnvironmentRequest, dict]] = None,
         *,
-        name: str = None,
+        name: Optional[str] = None,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> cloudshell.Environment:
         r"""Gets an environment. Returns NOT_FOUND if the environment does
@@ -546,10 +557,10 @@ class CloudShellServiceClient(metaclass=CloudShellServiceClientMeta):
 
     def start_environment(
         self,
-        request: Union[cloudshell.StartEnvironmentRequest, dict] = None,
+        request: Optional[Union[cloudshell.StartEnvironmentRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operation.Operation:
         r"""Starts an existing environment, allowing clients to
@@ -648,10 +659,10 @@ class CloudShellServiceClient(metaclass=CloudShellServiceClientMeta):
 
     def authorize_environment(
         self,
-        request: Union[cloudshell.AuthorizeEnvironmentRequest, dict] = None,
+        request: Optional[Union[cloudshell.AuthorizeEnvironmentRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operation.Operation:
         r"""Sends OAuth credentials to a running environment on
@@ -746,10 +757,10 @@ class CloudShellServiceClient(metaclass=CloudShellServiceClientMeta):
 
     def add_public_key(
         self,
-        request: Union[cloudshell.AddPublicKeyRequest, dict] = None,
+        request: Optional[Union[cloudshell.AddPublicKeyRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operation.Operation:
         r"""Adds a public SSH key to an environment, allowing clients with
@@ -845,10 +856,10 @@ class CloudShellServiceClient(metaclass=CloudShellServiceClientMeta):
 
     def remove_public_key(
         self,
-        request: Union[cloudshell.RemovePublicKeyRequest, dict] = None,
+        request: Optional[Union[cloudshell.RemovePublicKeyRequest, dict]] = None,
         *,
         retry: OptionalRetry = gapic_v1.method.DEFAULT,
-        timeout: float = None,
+        timeout: Optional[float] = None,
         metadata: Sequence[Tuple[str, str]] = (),
     ) -> operation.Operation:
         r"""Removes a public SSH key from an environment. Clients will no
