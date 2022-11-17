@@ -412,6 +412,7 @@ class CloudShellErrorDetails(proto.Message):
         CLOUD_SHELL_DISABLED = 2
         TOS_VIOLATION = 4
         QUOTA_EXCEEDED = 5
+        ENVIRONMENT_UNAVAILABLE = 6
 
     code: CloudShellErrorCode = proto.Field(
         proto.ENUM,
